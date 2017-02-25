@@ -2,10 +2,12 @@
 #include<stdlib.h>
 #include<time.h>
 
+#define NumOfSlotTypes 3
+
 
 typedef struct MapSlot {
 	
-	int SlotType;//stors a single character representing the type, G is for level ground, H is for hill, C is for city
+	int SlotType;//stors an int represening the slot type, 0=flat ground, 1=hill, 2=city
 	int PlayerHere;//stors the index from the player list of the player who is in this slot, 
 	
 } MapSlot;//end of map slot struct
@@ -13,7 +15,9 @@ typedef struct MapSlot {
 
 void FillMapArray(MapSlot MapSlots[], int MapSize);
 
-
+/*
+disposable main function
+*/
 int main(void){
 	
 	int MapSize = 3;
@@ -40,7 +44,7 @@ returns nothing
 void FillMapArray(MapSlot MapSlots[], int MapSize){
 
 	for(int i=0;i<MapSize;i++){
-		MapSlots[i].SlotType = rand()%3;
+		MapSlots[i].SlotType = rand()%NumOfSlotTypes;
 		MapSlots[i].PlayerHere = -1;//setting all the values storying player locations to -1 or empty to be filled later
 	}//end of for loop
 	
