@@ -1,3 +1,8 @@
+/*
+contains the MapSlot struc and the function to fill the MapSlot array and a defenition for number of slot types
+also headers and main eclusivly for testing perposes
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
