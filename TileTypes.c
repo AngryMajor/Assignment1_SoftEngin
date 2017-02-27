@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//defines so i dont have to go through everything to adjuct for a difrent player struct
+//defines to make it easyer to change player struct
 #define PlayerDex (*Player).dex
 #define PlayerStr (*Player).str
 #define PlayerSmar (*Player).smar
@@ -16,9 +16,11 @@ struct PlayerStruct{
 	int mag;
 };
 
+
 void EnterSlot(struct PlayerStruct *Player, int SlotType);
 void ExitSlot(struct PlayerStruct *Player, int SlotType);
 void Move(struct PlayerStruct *Player, int EnterSlot, int ExitSlot);
+
 
 
 /*
@@ -35,16 +37,41 @@ int main(){
 	Dummy.smar = 40;
 	Dummy.mag = 10;
 	
+	printf("%d %d %d %d\n",Dummy.dex, Dummy.str,Dummy.smar, Dummy.mag);
+	
 	scanf("%d", &enterSlot);
 	scanf("%d", &exitSlot);
 	
-	Move(&Dummy, enterSlot, exitSlot);
+	EnterSlot(&Dummy, enterSlot);
+	
+	printf("%d %d %d %d\n",Dummy.dex, Dummy.str,Dummy.smar, Dummy.mag);
+	
+	ExitSlot(&Dummy, exitSlot);
+	
+	
+	printf("%d %d %d %d\n",Dummy.dex, Dummy.str,Dummy.smar, Dummy.mag);
+	
+	//Move(&Dummy, enterSlot, exitSlot);
+	
 	
 }//end of main
 
-///////////////////////////////////
-//actual functions for use
-/////////////////////////////////////////////////////
+
+
+/*
+simply calls ExitSlot, moves the character then Calles enterslot on the character
+*/
+
+void Move(struct PlayerStruct *Player, int enterSlot, int exitSlot){
+	
+		ExitSlot(Player, exitSlot);
+	
+	//moves the player from one tile to another here
+	
+		EnterSlot(Player, enterSlot);
+	
+}//end of move
+
 
 
 /*
@@ -55,17 +82,18 @@ modifies the player struct in acordence to the slot it is entering
 
 void EnterSlot(struct PlayerStruct *Player, int SlotType){
 	
-  //switch to see what slot type the palyer is entering
+	
+	
 	switch(SlotType){
-		case 0:
+		case 0://if flat land
 			break;
 			
-		case 1:
+		case 1://if hill
 			if(PlayerDex < 50) PlayerStr -=10;  
 			else if(PlayerDex >= 60) PlayerStr +=10;
 			break;
 			
-		case 2:
+		case 2://if city
 			if( PlayerSmar > 60) PlayerMag +=10;
 			if( PlayerSmar <= 50) PlayerDex -=10;
 			break;
@@ -73,6 +101,7 @@ void EnterSlot(struct PlayerStruct *Player, int SlotType){
 		default:
 			printf("invlad slotType on enter");
 	}//end of switch
+	
 	
 }//end of enter slot
 
@@ -85,17 +114,16 @@ modifies the player struct in acordence to the slot it is entering
 
 void ExitSlot(struct PlayerStruct *Player, int SlotType){
 	
-  //switch to check what slot type the player is leaving
 	switch(SlotType){
-		case 0:
+		case 0://if flat land
 			break;
 			
-		case 1:
+		case 1://if hill
 			if(PlayerDex < 50) PlayerStr +=10;  
 			else if(PlayerDex >= 60) PlayerStr -=10;
 			break;
 			
-		case 2:
+		case 2://if city
 			if( PlayerSmar > 60) PlayerMag -=10;
 			if( PlayerSmar<= 50) PlayerDex +=10;
 			break;
@@ -107,13 +135,3 @@ void ExitSlot(struct PlayerStruct *Player, int SlotType){
 }//end of exit slot
 
 
-/*
-simply calls ExitSlot, moves the character then Calles enterslot on the character
-*/
-void Move(struct PlayerStruct *Player, int enterSlot, int exitSlot){
-	
-		ExitSlot(&Player, exitSlot);
-		
-		EnterSlot(&Player, enterSlot);
-	
-}//end of move
