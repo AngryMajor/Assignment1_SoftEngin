@@ -59,22 +59,6 @@ int main(){
 
 
 /*
-simply calls ExitSlot, moves the character then Calles enterslot on the character
-*/
-
-void Move(struct PlayerStruct *Player, int enterSlot, int exitSlot){
-	
-		ExitSlot(Player, exitSlot);
-	
-	//moves the player from one tile to another here
-	
-		EnterSlot(Player, enterSlot);
-	
-}//end of move
-
-
-
-/*
 makes aproprate changes to player stats when then enter a new slot
 requires a pointer to the player struct and slot being entered 
 modifies the player struct in acordence to the slot it is entering
