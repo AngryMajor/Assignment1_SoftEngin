@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define NumOfSlotTypes 3
+#define NumOfSlotTypes 3//
 
 typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;//defineing the slot types to integers for easyer use
 
