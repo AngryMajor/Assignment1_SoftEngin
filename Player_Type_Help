@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+	int player1_type;
+	char player1 ;
+	char player1_name[15];
+	
+	puts("There are four player options to choose from.");
+	puts("Enter the number corresponding to the player option.");
+	printf("1. Elf.\n2. Human.\n3. Ogre.\n4. Wizard\n");
+	printf("Please enter the number corresponding to the type for Player 1: ");
+	scanf("%d", &player1_type);
+	switch(player1_type)
+	{
+		case 1:
+		printf("You have chosen to play as 'ELF'.");
+		break;
+		case 2:
+		printf("You have chosen to play as 'HUMAN'.");
+		break;
+		case 3:
+		printf("You have chosen to play as 'OGRE'.");
+		break;
+		case 4:
+		printf("You have chosen to play as 'WIZARD'.");
+		break;
+		default:
+		printf("That's not a valid option.");
+	}
+	printf("Please enter Player 1's name: ");
+	scanf("%s", player1_name);
+
+	return 0;
+}
