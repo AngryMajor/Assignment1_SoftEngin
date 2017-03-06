@@ -13,6 +13,7 @@ struct player
 	int magic_skills;
 	int luck;
 	int dexterity;
+	int mapslot;//holds the index of the map slot this player is in
 };
 
 void elf(struct player *Current_Player);
