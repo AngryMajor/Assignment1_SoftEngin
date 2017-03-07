@@ -1,5 +1,6 @@
-
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
 
 /*
@@ -22,6 +23,8 @@ struct players
 taken from other file
 */
 
+typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;//defineing the slot types to integers for easyer use
+
 typedef struct MapSlot {
 	
 	SlotTypes thisSlotType;//stors an int represening the slot type
@@ -29,43 +32,70 @@ typedef struct MapSlot {
 	
 } MapSlot;//end of map slot struct
 
-void PlacePlayer(struct player, int players size, struct MapSlot, int mapsize);
-void EnterSlot(struct PlayerStruct *Player, int SlotType)
+void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapArray[], int mapsize);
+void EnterSlot(struct players *Player, int SlotType);
 
 /*
 Dummy main for testing
 */
 
 int main(){
-	srand
+	srand(time(NULL));
+	
+	struct players Players[2];
+	
+	MapSlot Map[3];
+	Map[0].PlayerHere = -1;
+	Map[1].PlayerHere = -1;
+	Map[2].PlayerHere = -1;
+
+	PlacePlayer(Players,2,Map,3);
+	
+	for(int i=0;i<2;i++) printf("%d  %d\n",i,Players[i].mapslot);
+	
+	
 }//end of main
 
 /*
 places each player in a random index location in the map
 takes the map and player arrays as well as ints of there sizes as input
 returns nothing but changes the location variables in the map and the players
-note srand must be called before running this function
+note srand must be called before running this function and all map slots must have their player here set to -1 inishaly
+also check that there are not more players then slots
 */
-void PlacePlayer(struct player CurrPlayer[], int playersSize, struct MapSlot MapArray[], int MapSize){
+void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapArray[], int MapSize){
 	
-	int SlotsTaken[playersSize] = {0};//holds the slots already taken between runs of the funciton
-	
-	//run through each player
-	for(int i=0;i<playersSize;i++){
-		//pic a slot
-		static int slotChoise = rand()%MapSize;
+	int playerNum=0;
+	int PlayerPlace;
 		
-		//chekc that that slot has not been taken
-		for(int j = 0;j<i;j++){
-			while(SlotsTaken[j] = )
-		}//end of j loop
+	while(playerNum<playersSize){
+		
+		//clear player place data
+		Players[playerNum].mapslot = -1;
+		
+		//store posable locatoin for player to be put
+		PlayerPlace = rand()%MapSize;
+		
+		//check if that location has a player in it, if not then put the player there
+		while(Players[playerNum].mapslot == -1){
+			
+			if(MapArray[PlayerPlace].PlayerHere  == -1){
+				
+				MapArray[PlayerPlace].PlayerHere = playerNum;
+				Players[playerNum].mapslot = PlayerPlace;
+				playerNum++;
+			}else{
+				PlayerPlace = ((PlayerPlace+1)%3);}
+		}//end of while
+		
+		EnterSlot(&Players[playerNum],PlayerPlace);
+		
 	}//end of i loop
-	
 }//end of place player
 
 /*
 dummy functions for testing only 
 */
-void EnterSlot(struct PlayerStruct *Player, int SlotType){
+void EnterSlot(struct players *Player, int SlotType){
 	printf("EnterSlot");	
 }
