@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "OurTypes.h"
 
 //defines to make it easyer to change player struct
 #define PlayerDex (*Player).dex
@@ -6,56 +7,9 @@
 #define PlayerSmar (*Player).smar
 #define PlayerMag (*Player).mag 
 
-/*
-dumy player struct
-*/
-struct PlayerStruct{
-	int dex;
-	int str;
-	int smar;
-	int mag;
-};
-
-
 void EnterSlot(struct PlayerStruct *Player, int SlotType);
 void ExitSlot(struct PlayerStruct *Player, int SlotType);
 void Move(struct PlayerStruct *Player, int EnterSlot, int ExitSlot);
-
-
-
-/*
-disposable main for testing
-*/
-int main(){
-	
-	int enterSlot;
-	int exitSlot;
-	
-	struct PlayerStruct Dummy;
-	Dummy.dex = 40;
-	Dummy.str = 10;
-	Dummy.smar = 40;
-	Dummy.mag = 10;
-	
-	printf("%d %d %d %d\n",Dummy.dex, Dummy.str,Dummy.smar, Dummy.mag);
-	
-	scanf("%d", &enterSlot);
-	scanf("%d", &exitSlot);
-	
-	EnterSlot(&Dummy, enterSlot);
-	
-	printf("%d %d %d %d\n",Dummy.dex, Dummy.str,Dummy.smar, Dummy.mag);
-	
-	ExitSlot(&Dummy, exitSlot);
-	
-	
-	printf("%d %d %d %d\n",Dummy.dex, Dummy.str,Dummy.smar, Dummy.mag);
-	
-	//Move(&Dummy, enterSlot, exitSlot);
-	
-	
-}//end of main
-
 
 
 /*
