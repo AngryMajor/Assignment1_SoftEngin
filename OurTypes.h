@@ -2,7 +2,7 @@
 This is a header file to contain all the types we define throughout the project
 */
 
-typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;  //Defining the slot types to integers for easier use
+enum SlotTypes{FlatGround,Hill,City};  //Defining the slot types to integers for easier use
 
 typedef struct MapSlot {
 	
