@@ -1,4 +1,4 @@
-#include "OurTypes.h"
+
 #include "OurFunctions.h"
 
 void PrintPlayer(struct player CurrPlayer);
