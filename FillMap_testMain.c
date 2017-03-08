@@ -1,5 +1,6 @@
 #include "OurFunctions.h"
 
+#define NumOfSlotTypes 3
 
 /*
 Fills an array of type mapslot with random types assigned 
@@ -23,6 +24,6 @@ void PrintMapSlot(MapSlot toPrint){
 	char *SlotNames[] = {"Flat Ground","Hill","City"};
 	
 	printf("%s",SlotNames[toPrint.thisSlotType]);
-	if(toPrint.PlayerHere !=) printf(   "%d",toPrint.PlayerHere);
-	put("");
+	if(toPrint.PlayerHere != -1) printf(   "%d",toPrint.PlayerHere);
+	puts("");
 }  //End of printmapslot
