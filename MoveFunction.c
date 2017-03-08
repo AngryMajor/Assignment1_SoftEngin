@@ -15,18 +15,6 @@ void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int enterSlot, int ex
 	
 }  //End of move
 
-
-void EnterSlot(struct PlayerStruct *Player, int SlotType){
-	printf("EnterSlot");	
-}
-
-
-void ExitSlot(struct PlayerStruct *Player, int SlotType){
-	printf("EixtSlot");
-}
-
-
-
 //Defines to make it easyer to change player struct
 #define PlayerDex (*Player).dex
 #define PlayerStr (*Player).str
