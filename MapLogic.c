@@ -1,3 +1,7 @@
+#include "OurTypes.h"
+#include "OurFunctions.h"
+
+
 /*
 Places each player in a random index location in the map
 takes the map and player arrays as well as ints of there sizes as input
