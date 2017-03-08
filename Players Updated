@@ -70,14 +70,6 @@ void elf(struct player *Current_Player)
 	Current_Player->magic_skills = (50 + rand() % 31);
 	Current_Player->luck = (rand() % 41) + 60;
 	Current_Player->dexterity = (rand() % 101);
-	
-	
-	printf("Smartness: %d\n", Current_Player->smartness);
-	printf("Life Points: %d\n", Current_Player->life_points);
-	printf("Strength: %d\n", Current_Player->strength);
-	printf("Luck: %d\n", Current_Player->luck);
-	printf("Dexterity: %d\n", Current_Player->dexterity);
-	printf("Magic Skills: %d\n", Current_Player->magic_skills);
 }
 
 void human(struct player *Current_Player)
@@ -94,13 +86,6 @@ void human(struct player *Current_Player)
 	Current_Player->luck = (rand() % 101);
 	sum = Current_Player->magic_skills + Current_Player->smartness + Current_Player->strength + Current_Player->dexterity + Current_Player->luck;
 	sum <=300;
-	printf("Smartness: %d\n", Current_Player->smartness);
-	printf("Life Points: %d\n", Current_Player->life_points);
-	printf("Strength: %d\n", Current_Player->strength);
-	printf("Luck: %d\n", Current_Player->luck);
-	printf("Dexterity: %d\n", Current_Player->dexterity);
-	printf("Magic Skills: %d\n", Current_Player->magic_skills);
-	
 }
 
 void ogre(struct player *Current_Player)
