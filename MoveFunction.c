@@ -7,8 +7,6 @@ void Move(struct player *Player, MapSlot MapSlots[], int enterSlot, int exitSlot
 	
 	EnterSlot(Player, enterSlot);
 	
-	printf("%d",PlayerLocation);
-	
 }  //End of move
 
 //Defines to make it easyer to change player struct
