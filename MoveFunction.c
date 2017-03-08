@@ -4,9 +4,6 @@ void Move(struct player *Player, MapSlot MapSlots[], int enterSlot, int exitSlot
 	
 	ExitSlot(Player, exitSlot);
 	
-	MapSlots[exitSlot].PlayerHere = PlayerLocation;
-	PlayerLocation = enterSlot;
-	MapSlots[enterSlot].PlayerHere = PlayerLocation;
 	
 	EnterSlot(Player, enterSlot);
 	
@@ -15,10 +12,10 @@ void Move(struct player *Player, MapSlot MapSlots[], int enterSlot, int exitSlot
 }  //End of move
 
 //Defines to make it easyer to change player struct
-#define PlayerDex (*Player).dex
-#define PlayerStr (*Player).str
-#define PlayerSmar (*Player).smar
-#define PlayerMag (*Player).mag 
+#define PlayerDex (*Player).dexterity
+#define PlayerStr (*Player).strength
+#define PlayerSmar (*Player).smartness
+#define PlayerMag (*Player).magic_skills
 
 
 /*
