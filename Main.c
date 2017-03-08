@@ -1,6 +1,6 @@
 include<stdio.h>
 include"OurTypes.c"
 
-int maind(){
+int main(){
 
 }//end of main
