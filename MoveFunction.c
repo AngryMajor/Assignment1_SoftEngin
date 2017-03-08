@@ -1,5 +1,4 @@
 #include "OurTypes.h"
-#include "OurFunctions.h"
 
 void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int enterSlot, int exitSlot){
 	
