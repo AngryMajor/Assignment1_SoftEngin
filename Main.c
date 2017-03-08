@@ -1,14 +1,7 @@
-include<stdio.h>
-include"OurTypes.h"
-// creat header for func prototypes
-  
-void elf(struct player *Current_Player);  //Function prototype
-void human(struct player *Current_Player);   //Function prototype
-void ogre(struct player *Current_Player);   //Function prototype
-void wizard(struct player *Current_Player);   //Function prototype 
-void type();
+include "OurFunctions.h"
+include "OurTypes.h"
 
-int main()
+int main(void)
 {
 int choice;
 printf("Please input how many players are playing the game: ");
