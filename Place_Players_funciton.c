@@ -1,60 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
-
-/*
-taken from other file
-*/
-struct players
-{
-	int type;
-	char name[32];
-	int life_points;
-	int smartness;
-	int strength;
-	int magic_skills;
-	int luck;
-	int dexterity;
-	int mapslot;//holds the index of the map slot this player is in
-};
-
-/*
-taken from other file
-*/
-
-typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;//defineing the slot types to integers for easyer use
-
-typedef struct MapSlot {
-	
-	SlotTypes thisSlotType;//stors an int represening the slot type
-	int PlayerHere;//stors the index from the player list of the player who is in this slot, 
-	
-} MapSlot;//end of map slot struct
+#include"OurTypes.h"
 
 void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapArray[], int mapsize);
 void EnterSlot(struct players *Player, int SlotType);
 
-/*
-Dummy main for testing
-*/
-
-int main(){
-	srand(time(NULL));
-	
-	struct players Players[2];
-	
-	MapSlot Map[3];
-	Map[0].PlayerHere = -1;
-	Map[1].PlayerHere = -1;
-	Map[2].PlayerHere = -1;
-
-	PlacePlayer(Players,2,Map,3);
-	
-	for(int i=0;i<2;i++) printf("%d  %d\n",i,Players[i].mapslot);
-	
-	
-}//end of main
 
 /*
 places each player in a random index location in the map
