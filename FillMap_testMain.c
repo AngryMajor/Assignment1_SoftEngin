@@ -19,7 +19,7 @@ void FillMapArray(MapSlot MapSlots[], int MapSize){
 }  //End of fill map array
 
 
-void PrintMapSlot(MapSlot toPrint){
+void PrintMapSlotChar(MapSlot toPrint){
 	
 	char *SlotNames[] = {"Flat Ground","Hill","City"};
 	
