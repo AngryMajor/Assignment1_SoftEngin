@@ -1,5 +1,9 @@
 /* This is a header file to contain all the functions we defined throughout the project */
 
+#ifndef _OURFUNCTIONSH_
+#define _OURFUNCTIONSH_
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
