@@ -1,6 +1,6 @@
 #include "OurFunctions.h"
 
-void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int enterSlot, int exitSlot){
+void Move(struct player *Player, MapSlot MapSlots[], int enterSlot, int exitSlot){
 	
 	ExitSlot(Player, exitSlot);
 	
@@ -27,7 +27,7 @@ requires a pointer to the player struct and slot being entered
 modifies the player struct in acordence to the slot it is entering
 */
 
-void EnterSlot(struct PlayerStruct *Player, int SlotType){
+void EnterSlot(struct player *Player, int SlotType){
 	
 	
 	
@@ -59,7 +59,7 @@ requires a pointer to the player struct and slot being exited
 modifies the player struct in acordence to the slot it is entering
 */
 
-void ExitSlot(struct PlayerStruct *Player, int SlotType){
+void ExitSlot(struct player *Player, int SlotType){
 	
 	switch(SlotType){
 		case 0://if flat land
