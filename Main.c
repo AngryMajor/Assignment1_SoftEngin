@@ -3,20 +3,50 @@ include "OurTypes.h"
 
 int main(void)
 {
-int choice;
+ 
+//creat player array
+int PlayerNum;
 printf("Please input how many players are playing the game: ");
-scanf("%d", &choice);
-struct player player[choice];
- for(int i = 0; i < choice; i++)
+scanf("%d", &PlayerNum);
+struct player player[PlayerNum];
+
+//fill player array
+ for(int i = 0; i < PlayerNum; i++)
  {
-   type();
-   //returns a player witch we stor in an array
+   player[i] = type();
  }
   
-  //same thing for map slots
+ //creat map array
+int MapSize;
+printf("Please input how many slots are in the map: ");
+scanf("%d", &MapSize);
+MapSlot Map[MapSize];
+ 
+ //fill map array
+ for(int i = 0; i < MapSize; i++)
+ {
+   Map[i] = CreatMapSlot();
+ }
+ 
+ for(int i=0;i<PlayerNum;i++){
+ //place players
+ }//end of place players loop
+ 
+ 
+int choise;
+for(int i=0;i<PlayerNum;i++){
+  printf("");
+  scang("",choise);
+ 
+ if(choise == 1){
+ //move
+ }else{
+ //attack
+ }//choise if
+}//end of looping through players
   
-  for(number of players){
-  //creat menue for turns
-  }
-    
+ for(int i=0;i<PlayerNum;i++){
+	PrintPlayer(Player[i]);
+ }//end of print players
+ 
 }//end of main
