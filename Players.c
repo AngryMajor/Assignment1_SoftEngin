@@ -1,7 +1,7 @@
 #include"OurTypes.h"
 #include"OurFunctions.h"
 
-player type()
+struct player type()
 {
 	
 	struct player player;
