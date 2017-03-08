@@ -7,7 +7,7 @@ recive input from the user in an inishal menu setting things like number of play
 //generate a number of map slots
 //place players onto the map
 
-cycle through the players asking if they want to move or attack
+/cycle through the players asking if they want to move or attack
 players attacking eachother
 /players moveing around on the map
 
