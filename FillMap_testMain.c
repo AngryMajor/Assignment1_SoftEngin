@@ -1,26 +1,7 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include "OurTypes.h"
+#include "OurFunctions.h"
 
-#define NumOfSlotTypes 3//
-
-typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;  //Defining the slot types to integers for easier use
-
-typedef struct MapSlot {
-	
-	SlotTypes thisSlotType;  //Stores an integer represening the slot type
-	int PlayerHere;  //Stores the index from the player list of the player who is in this slot, 
-	
-} MapSlot;  //End of map slot struct
-
-
-void FillMapArray(MapSlot MapSlots[], int MapSize);
-void PrintMapSlot(MapSlot toPrint);
-
-/*
-disposable main function
-*/
-int main(void){
+{
 	
 	int MapSize = 3;
 	
