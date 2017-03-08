@@ -1,20 +1,5 @@
 #include "OurFunctions.h"
 
-{
-	
-	int MapSize = 3;
-	
-	MapSlot MapSlots[MapSize];
-	
-	srand(time(NULL));
-
-	FillMapArray(MapSlots, MapSize);
-	
-	for(int i=0;i<sizeof(MapSlots)/sizeof(MapSlot);i++) PrintMapSlot(MapSlots[i]);
-}  //End of main
-
-
-
 
 /*
 Fills an array of type mapslot with random types assigned 
