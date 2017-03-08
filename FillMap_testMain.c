@@ -4,24 +4,22 @@
 #include"OurTypes.h"
 
 
-void FillMapArray(MapSlot MapSlots[], int MapSize);
+MapSlot CreatMapSlot();
 void PrintMapSlot(MapSlot toPrint);
 
 /*
-Fills an array of type mapslot with random types assined 
-requires stdlib.h and time.h and srand to have been called
-FillMapArray(array of all map slots, size of the array)
-returns nothing
+simple function that creates a map slot to be stored
+takes no arguments and returns a map slot
 */
 
-void FillMapArray(MapSlot MapSlots[], int MapSize){
-
-	for(int i=0;i<MapSize;i++){
-		MapSlots[i].thisSlotType = rand()%NumOfSlotTypes;
-		MapSlots[i].PlayerHere = -1;//setting all the values storying player locations to -1 or empty to be filled later
-	}//end of for loop
+MapSlot CreatMapSlot(){
+	MapSlot Curr;
 	
-}//end of fill map array
+	Curr.thisSlotType = rand()%3;
+	Curr.PlayerHere = -1;
+	
+	return Curr;
+}//end of creat map slot
 
 
 void PrintMapSlot(MapSlot toPrint){
