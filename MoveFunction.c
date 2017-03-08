@@ -1,16 +1,7 @@
-#include <stdio.h>
+#include "OurTypes.h"
+#include "OurFunctions.h"
 
 #define PlayerLocation (*Player).index
-
-/*
-Dummy Player strut for testing
-*/
-
-struct PlayerStruct{
-	
-	int index;
-	
-};  //End of player struct
 
 typedef struct MapSlot {
 	
