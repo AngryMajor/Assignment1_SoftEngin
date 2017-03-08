@@ -2,11 +2,9 @@
 This is a header file to contain all the types we define throughout the project
 */
 
-enum SlotTypes{FlatGround,Hill,City};  //Defining the slot types to integers for easier use
-
 typedef struct MapSlot {
 	
-	SlotTypes thisSlotType;  //stores an integer representing the slot type
+	int thisSlotType;  //stores an integer representing the slot type
 	int PlayerHere;  //Stores the index from the player list of the player who is in this slot, 
 	
 } MapSlot;  //End of map slot struct
