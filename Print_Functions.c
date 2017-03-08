@@ -2,7 +2,7 @@
 #include<string.h>
 
 /*
-struct taken form players file on git
+Struct taken from players file on git
 */
 
 struct player
@@ -25,7 +25,7 @@ dummy main
 
 int main(){
 	
-	//creat and fill a test struct with test values
+	//Create and fill a test struct with test values
 	struct player player1;
 	
 	player1.type = 2;
@@ -35,17 +35,17 @@ int main(){
 	
 	PrintPlayer(player1);
 	
-}//end of main
+}  //End of main
 
 /*
-prints a players relevent stats for the end of the game
+Prints a players relevent stats for the end of the game
 takes a player sturct as input and returns nothing
 changes no values, just prints the stats
 */
 
 void PrintPlayer(struct player CurrPlayer){
 	
-	//change the player type from the working int into a printable string
+	//Change the player type from the working int into a printable string
 	char CurrPlayerType[7];	
 	switch (CurrPlayer.type){
 		case 1:
@@ -62,8 +62,8 @@ void PrintPlayer(struct player CurrPlayer){
 			break;
 		default:
 			printf("error:player type value undefined %d",CurrPlayer.type);
-	}//end of switch
+	}  //End of switch
 	
-	printf("%s (%s, %d)\n",CurrPlayer.name,CurrPlayerType,CurrPlayer.life_points);//print the relevent player stats with new line
+	printf("%s (%s, %d)\n",CurrPlayer.name,CurrPlayerType,CurrPlayer.life_points);  //Print the relevent player stats with new line
 	
-}//end of print player
+}  //End of print player
