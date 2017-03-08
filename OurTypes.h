@@ -11,7 +11,7 @@ typedef struct MapSlot {
 	
 } MapSlot;  //End of map slot struct
 
-typedef struct player
+struct player
 {
 	int type;
 	char name[32];
@@ -22,4 +22,4 @@ typedef struct player
 	int luck;
 	int dexterity;
 	int mapslot;  //Holds the index of the map slot this player is in
-}player;
+};
