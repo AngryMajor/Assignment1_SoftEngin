@@ -8,7 +8,7 @@ returns nothing but changes the location variables in the map and the players
 note srand must be called before running this function and all map slots must have their player here set to -1 inishaly
 also check that there are not more players then slots
 */
-void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapArray[], int MapSize){
+void PlacePlayer(struct player Players[], int playersSize, struct MapSlot MapArray[], int MapSize){
 	
 	int playerNum=0;
 	int PlayerPlace;
