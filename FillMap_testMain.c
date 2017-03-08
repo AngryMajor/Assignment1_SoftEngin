@@ -4,14 +4,14 @@
 
 #define NumOfSlotTypes 3//
 
-typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;//defineing the slot types to integers for easyer use
+typedef enum SlotTypes{FlatGround,Hill,City}SlotTypes;  //Defining the slot types to integers for easier use
 
 typedef struct MapSlot {
 	
-	SlotTypes thisSlotType;//stors an int represening the slot type
-	int PlayerHere;//stors the index from the player list of the player who is in this slot, 
+	SlotTypes thisSlotType;  //Stores an integer represening the slot type
+	int PlayerHere;  //Stores the index from the player list of the player who is in this slot, 
 	
-} MapSlot;//end of map slot struct
+} MapSlot;  //End of map slot struct
 
 
 void FillMapArray(MapSlot MapSlots[], int MapSize);
@@ -31,13 +31,13 @@ int main(void){
 	FillMapArray(MapSlots, MapSize);
 	
 	for(int i=0;i<sizeof(MapSlots)/sizeof(MapSlot);i++) PrintMapSlot(MapSlots[i]);
-}//end of main
+}  //End of main
 
 
 
 
 /*
-Fills an array of type mapslot with random types assined 
+Fills an array of type mapslot with random types assigned 
 requires stdlib.h and time.h and srand to have been called
 FillMapArray(array of all map slots, size of the array)
 returns nothing
@@ -47,10 +47,10 @@ void FillMapArray(MapSlot MapSlots[], int MapSize){
 
 	for(int i=0;i<MapSize;i++){
 		MapSlots[i].thisSlotType = rand()%NumOfSlotTypes;
-		MapSlots[i].PlayerHere = -1;//setting all the values storying player locations to -1 or empty to be filled later
-	}//end of for loop
+		MapSlots[i].PlayerHere = -1;  //Setting all the values storying player locations to -1 or empty to be filled later
+	}  //End of for loop
 	
-}//end of fill map array
+}  //End of fill map array
 
 
 void PrintMapSlot(MapSlot toPrint){
@@ -60,4 +60,4 @@ void PrintMapSlot(MapSlot toPrint){
 	printf("%s",SlotNames[toPrint.thisSlotType]);
 	if(toPrint.PlayerHere !=) printf(   "%d",toPrint.PlayerHere);
 	put("");
-}//end of printmapslot
+}  //End of printmapslot
