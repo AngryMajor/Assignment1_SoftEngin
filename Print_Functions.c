@@ -1,31 +1,4 @@
-
 #include "OurFunctions.h"
-
-void PrintPlayer(struct player CurrPlayer);
-
-/*
-dummy main
-*/
-
-int main(){
-	
-	//Create and fill a test struct with test values
-	struct player player1;
-	
-	player1.type = 2;
-	strcpy(player1.name,"peter");
-	player1.life_points = 100;
-	
-	
-	PrintPlayer(player1);
-	
-}  //End of main
-
-/*
-Prints a players relevent stats for the end of the game
-takes a player sturct as input and returns nothing
-changes no values, just prints the stats
-*/
 
 void PrintPlayer(struct player CurrPlayer){
 	
