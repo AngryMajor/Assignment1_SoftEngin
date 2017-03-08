@@ -1,5 +1,4 @@
 #include "OurFunctions.h"
-#include "OurTypes.h"
 
 void attack(struct player *AttackerPlayer, struct player *AttackedPlayer)
 {
