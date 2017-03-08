@@ -1,35 +1,6 @@
 #include "OurTypes.h"
 #include "OurFunctions.h"
 
-#define PlayerLocation (*Player).index
-
-typedef struct MapSlot {
-	
-	int SlotType;  //Stores an integer representing the slot type, 0 = flat ground, 1 = hill, 2 = city
-	int PlayerHere;  //Stores the index from the player list of the player who is in this slot, 
-	
-}MapSlot;  //End of map slot struct
-
-
-void EnterSlot(struct PlayerStruct *Player, int SlotType);
-void ExitSlot(struct PlayerStruct *Player, int SlotType);
-void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int EnterSlot, int ExitSlot);
-
-
-int main(){
-	
-	int MapSize = 3;
-	
-	MapSlot MapSlots[MapSize];
-	struct PlayerStruct Dummy;
-	Dummy.index = 1;
-	
-	int MoveTo= 2;
-	
-	Move(&Dummy, MapSlots, MoveTo, Dummy.index);
-}  //End of main
-
-
 void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int enterSlot, int exitSlot){
 	
 	ExitSlot(Player, exitSlot);
