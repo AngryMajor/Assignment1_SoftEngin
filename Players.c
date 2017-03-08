@@ -1,63 +1,37 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include"OurTypes.h"
+#include"OurFunctions.h"
 
-
-struct player
-{
-	int type;
-	char name[32];
-	int life_points;
-	int smartness;
-	int strength;
-	int magic_skills;
-	int luck;
-	int dexterity;
-	int mapslot;//holds the index of the map slot this player is in
-};
-
-void elf(struct player *Current_Player);
-void human(struct player *Current_Player);
-void ogre(struct player *Current_Player);
-void wizard(struct player *Current_Player);
-
-int main()
+player type()
 {
 	
-	int choice;
-	printf("Please input how many players are playing the game: ");
-	scanf("%d", &choice);
-	struct player player[choice];
-	
-	for(int i = 0; i < choice; i++)
-	{
+	struct player player;
 		puts("There are four player options to choose from.");
 		puts("Enter the number corresponding to the player option.");
 		printf("1. Elf.\n2. Human.\n3. Ogre.\n4. Wizard\n");
 		
 		do{
-				printf("Please enter the number corresponding to the type for Player 1: ");
-			scanf("%d", &player[i].type);
-			switch(player[i].type)
+			printf("Please enter the number corresponding to the type for Player 1: ");
+			scanf("%d", &player.type);
+			switch(player.type)
 			{
 				case 1:
-				elf(&player[i]);
+				elf(&player);
 				break;
 				case 2:
-				human(&player[i]);
+				human(&player);
 				break;
 				case 3:
-				ogre(&player[i]);
+				ogre(&player);
 				break;
 				case 4:
-				wizard(&player[i]);
+				wizard(&player);
 				break;
 				default:
 				printf("That's not a valid option.\n");
 			}
-		} while(player[i].type >4 || player[i].type < 0);
-	}
-return 0;
+		} while(player.type >4 || player.type < 0);
+	
+	return player;
 }
 void elf(struct player *Current_Player)
 {	
