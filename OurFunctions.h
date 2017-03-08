@@ -12,12 +12,11 @@ void ogre(struct player *Current_Player);   //Function prototype
 void wizard(struct player *Current_Player);   //Function prototype 
 void type();  //Function prototype
 
-void EnterSlot(struct Player *Player, int SlotType);   //Function prototype
-void ExitSlot(struct Player *Player, int SlotType);   //Function prototype
-void Move(struct Player *Player, int EnterSlot, int ExitSlot);   //Function prototype
+void EnterSlot(struct player *Player, int SlotType);   //Function prototype
+void ExitSlot(struct player *Player, int SlotType);   //Function prototype
+void Move(struct player *Player, int EnterSlot, int ExitSlot);   //Function prototype
 
 void PlacePlayer(struct player Player[], int playersSize, struct MapSlot MapArray[], int mapsize);  //Function prototype
-void EnterSlot(struct player *Player, int SlotType);  //Function prototype
 
 void PrintPlayer(struct player CurrPlayer);  //Function prototype
 
