@@ -3,8 +3,6 @@
 #include<time.h>
 #include"OurTypes.h"
 
-#define NumOfSlotTypes 3//
-
 
 void FillMapArray(MapSlot MapSlots[], int MapSize);
 void PrintMapSlot(MapSlot toPrint);
