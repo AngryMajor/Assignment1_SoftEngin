@@ -1,41 +1,10 @@
 #include<stdio.h>
 #include<string.h>
+#include"OurTypes.h"
 
-/*
-struct taken form players file on git
-*/
 
-struct player
-{
-	int type;
-	char name[32];
-	int life_points;
-	int smartness;
-	int strength;
-	int magic_skills;
-	int luck;
-	int dexterity;
-};
 
 void PrintPlayer(struct player CurrPlayer);
-
-/*
-dummy main
-*/
-
-int main(){
-	
-	//creat and fill a test struct with test values
-	struct player player1;
-	
-	player1.type = 2;
-	strcpy(player1.name,"peter");
-	player1.life_points = 100;
-	
-	
-	PrintPlayer(player1);
-	
-}//end of main
 
 /*
 prints a players relevent stats for the end of the game
