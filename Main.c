@@ -36,7 +36,7 @@ MapSlot Map[MapSize];
 int choise;
 for(int i=0;i<PlayerNum;i++){
   printf("");
-  scang("",choise);
+  scanf("",choise);
  
  if(choise == 1){
  //move
@@ -46,7 +46,7 @@ for(int i=0;i<PlayerNum;i++){
 }//end of looping through players
   
  for(int i=0;i<PlayerNum;i++){
-	PrintPlayer(Player[i]);
+	PrintPlayer(player[i]);
  }//end of print players
  
 }//end of main
