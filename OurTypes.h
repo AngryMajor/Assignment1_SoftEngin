@@ -2,6 +2,10 @@
 This is a header file to contain all the types we define throughout the project
 */
 
+#ifndef _OURTYPESH_
+#define _OURTYPESH_
+
+
 typedef struct MapSlot {
 	
 	int thisSlotType;  //stores an integer representing the slot type
@@ -21,3 +25,5 @@ struct player
 	int dexterity;
 	int mapslot;  //Holds the index of the map slot this player is in
 };
+
+#endif
