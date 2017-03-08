@@ -26,4 +26,6 @@ void PrintPlayer(struct player CurrPlayer);  //Function prototype
 
 void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
 
+MapSlot CreatMapSlot();
+
 #endif
