@@ -1,5 +1,5 @@
 /*
-places each player in a random index location in the map
+Places each player in a random index location in the map
 takes the map and player arrays as well as ints of there sizes as input
 returns nothing but changes the location variables in the map and the players
 note srand must be called before running this function and all map slots must have their player here set to -1 inishaly
@@ -12,13 +12,13 @@ void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapAr
 		
 	while(playerNum<playersSize){
 		
-		//clear player place data
+		//Clear player place data
 		Players[playerNum].mapslot = -1;
 		
-		//store posable locatoin for player to be put
+		//Store posable locatoin for player to be put
 		PlayerPlace = rand()%MapSize;
 		
-		//check if that location has a player in it, if not then put the player there
+		//Check if that location has a player in it, if not then put the player there
 		while(Players[playerNum].mapslot == -1){
 			
 			if(MapArray[PlayerPlace].PlayerHere  == -1){
@@ -28,12 +28,12 @@ void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapAr
 				playerNum++;
 			}else{
 				PlayerPlace = ((PlayerPlace+1)%3);}
-		}//end of while
+		}  //End of while
 		
 		EnterSlot(&Players[playerNum],PlayerPlace);
 		
-	}//end of i loop
-}//end of place player
+	}  //End of i loop
+}  //End of place player
 
 
 
@@ -43,7 +43,7 @@ void PrintMapSlot(MapSlot toPrint){
 	
 	printf("%s",SlotNames[toPrint.thisSlotType]);
 	
-}//end of printmapslot
+}  //End of printmapslot
 
 
 MapSlot CreatMapSlot(){
@@ -53,4 +53,4 @@ MapSlot CreatMapSlot(){
 	Curr.PlayerHere = -1;
 	
 	return Curr;
-}//end of creat map slot
+}  //End of creat map slot
