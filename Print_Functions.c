@@ -1,21 +1,5 @@
-#include<stdio.h>
-#include<string.h>
-
-/*
-Struct taken from players file on git
-*/
-
-struct player
-{
-	int type;
-	char name[32];
-	int life_points;
-	int smartness;
-	int strength;
-	int magic_skills;
-	int luck;
-	int dexterity;
-};
+#include "OurTypes.h"
+#include "OurFunctions.h"
 
 void PrintPlayer(struct player CurrPlayer);
 
