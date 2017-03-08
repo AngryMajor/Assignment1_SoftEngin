@@ -10,14 +10,14 @@ struct PlayerStruct{
 	
 	int index;
 	
-};//nd of player struct
+};  //End of player struct
 
 typedef struct MapSlot {
 	
-	int SlotType;//stors an int represening the slot type, 0=flat ground, 1=hill, 2=city
-	int PlayerHere;//stors the index from the player list of the player who is in this slot, 
+	int SlotType;  //Stores an integer representing the slot type, 0 = flat ground, 1 = hill, 2 = city
+	int PlayerHere;  //Stores the index from the player list of the player who is in this slot, 
 	
-}MapSlot;//end of map slot struct
+}MapSlot;  //End of map slot struct
 
 
 void EnterSlot(struct PlayerStruct *Player, int SlotType);
@@ -36,7 +36,7 @@ int main(){
 	int MoveTo= 2;
 	
 	Move(&Dummy, MapSlots, MoveTo, Dummy.index);
-}//end of main
+}  //End of main
 
 
 void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int enterSlot, int exitSlot){
@@ -51,7 +51,7 @@ void Move(struct PlayerStruct *Player, MapSlot MapSlots[], int enterSlot, int ex
 	
 	printf("%d",PlayerLocation);
 	
-}//end of move
+}  //End of move
 
 
 void EnterSlot(struct PlayerStruct *Player, int SlotType){
@@ -65,7 +65,7 @@ void ExitSlot(struct PlayerStruct *Player, int SlotType){
 
 
 
-//defines to make it easyer to change player struct
+//Defines to make it easyer to change player struct
 #define PlayerDex (*Player).dex
 #define PlayerStr (*Player).str
 #define PlayerSmar (*Player).smar
@@ -73,7 +73,7 @@ void ExitSlot(struct PlayerStruct *Player, int SlotType){
 
 
 /*
-makes aproprate changes to player stats when then enter a new slot
+Makes aproprate changes to player stats when then enter a new slot
 requires a pointer to the player struct and slot being entered 
 modifies the player struct in acordence to the slot it is entering
 */
@@ -83,22 +83,22 @@ void EnterSlot(struct PlayerStruct *Player, int SlotType){
 	
 	
 	switch(SlotType){
-		case 0://if flat land
+		case 0:  //If flat land
 			break;
 			
-		case 1://if hill
+		case 1:  //If hill
 			if(PlayerDex < 50) PlayerStr -=10;  
 			else if(PlayerDex >= 60) PlayerStr +=10;
 			break;
 			
-		case 2://if city
+		case 2:  //If city
 			if( PlayerSmar > 60) PlayerMag +=10;
 			if( PlayerSmar <= 50) PlayerDex -=10;
 			break;
 		
 		default:
 			printf("invlad slotType on enter");
-	}//end of switch
+	}  //End of switch
 	
 	
 }//end of enter slot
