@@ -14,7 +14,7 @@ void elf(struct player *Current_Player);  //Function prototype
 void human(struct player *Current_Player);   //Function prototype
 void ogre(struct player *Current_Player);   //Function prototype
 void wizard(struct player *Current_Player);   //Function prototype 
-void type();  //Function prototype
+struct player type();  //Function prototype
 
 void EnterSlot(struct player *Player, int SlotType);   //Function prototype
 void ExitSlot(struct player *Player, int SlotType);   //Function prototype
