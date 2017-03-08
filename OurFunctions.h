@@ -25,3 +25,5 @@ void PlacePlayer(struct player Player[], int playersSize, struct MapSlot MapArra
 void PrintPlayer(struct player CurrPlayer);  //Function prototype
 
 void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
+
+#endif
