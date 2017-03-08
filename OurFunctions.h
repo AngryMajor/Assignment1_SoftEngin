@@ -19,3 +19,5 @@ void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapAr
 void EnterSlot(struct players *Player, int SlotType);  //Function prototype
 
 void PrintPlayer(struct player CurrPlayer);  //Function prototype
+
+void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
