@@ -35,3 +35,23 @@ void PlacePlayer(struct players Players[], int playersSize, struct MapSlot MapAr
 		
 	}//end of i loop
 }//end of place player
+
+
+
+void PrintMapSlot(MapSlot toPrint){
+	
+	char *SlotNames[] = {"Flat Ground","Hill","City"};
+	
+	printf("%s",SlotNames[toPrint.thisSlotType]);
+	
+}//end of printmapslot
+
+
+MapSlot CreatMapSlot(){
+	MapSlot Curr;
+	
+	Curr.thisSlotType = rand()%3;
+	Curr.PlayerHere = -1;
+	
+	return Curr;
+}//end of creat map slot
