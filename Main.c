@@ -34,6 +34,7 @@ int main(void)
 
 
 	int choise;
+	int Failed;
 	for(int i=0;i<PlayerNum;i++){
 		printf("palyer %d's turn, would you like to\n1:Move2:Attack closest player",i+1);
 		scanf("%d",&choise);
