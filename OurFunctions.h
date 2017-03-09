@@ -17,7 +17,7 @@ struct player type();  //Function prototype
 
 void EnterSlot(struct player *Player, int SlotType);   //Function prototype
 void ExitSlot(struct player *Player, int SlotType);   //Function prototype
-void Move(struct player *Player,MapSlot MapSlots[], int EnterSlot, int ExitSlot);   //Function prototype
+int Move(struct player *Player,int PlayerIndex, MapSlot MapSlots[], int direction);   //Function prototype
 
 void PlacePlayer(struct player Player[], int playersSize, struct MapSlot MapArray[], int mapsize);  //Function prototype
 
