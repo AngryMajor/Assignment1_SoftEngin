@@ -18,7 +18,7 @@ void PrintPlayer(struct player CurrPlayer){
 			strcpy(CurrPlayerType,"Wizard");
 			break;
 		default:
-			printf("error:player type value undefined %d",CurrPlayer.type);
+			printf("Error:player type value undefined %d\n",CurrPlayer.type);
 	}  //End of switch
 	
 	printf("%s (%s, %d)\n",CurrPlayer.name,CurrPlayerType,CurrPlayer.life_points);  //Print the relevent player stats with new line
