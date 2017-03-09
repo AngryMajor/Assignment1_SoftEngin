@@ -28,18 +28,34 @@ int main(void)
 		Map[i] = CreatMapSlot();
 	}
 
-	for(int i=0;i<PlayerNum;i++){
-		//place players
-	}//end of place players loop
+	//for(int i=0;i<PlayerNum;i++){
+		PlacePlayer(player, PlayerNum, Map, MapSize);
+	//}//end of place players loop
 
 
 	int choise;
 	for(int i=0;i<PlayerNum;i++){
-		printf("Do you wish to attack or move? 1 = Move, 2 = Attack");
-		scanf("%d",choise);
+		printf("palyer %d's turn, would you like to\n1:Move2:Attack closest player",i+1);
+		scanf("%d",&choise);
 
 		if(choise == 1){
-			//move
+			int direction;
+				
+				printf("please input witch direction you would like to move, 0 for down, 1 for up");
+				scanf("%d",&direction);
+				
+				switch(direction){
+					case 0:
+						Failed = Move(&player[i],i,Map,-1);
+						break;
+					case 1:
+						Failed= Move(&player[i],i,Map,1);
+						break;
+					default:
+						Failed = 1;
+						printf("invalid direction, please try again\n");
+						break;
+				}//end of up down switch
 		}else{
 			find_players(player, i, Map, MapSize);
 			//attack
