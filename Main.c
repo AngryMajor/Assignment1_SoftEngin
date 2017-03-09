@@ -41,6 +41,7 @@ int main(void)
 		if(choise == 1){
 			//move
 		}else{
+			find_players(player, i, Map, MapSize);
 			//attack
 		}//choise if
 	}//end of looping through players
