@@ -15,3 +15,60 @@ void attack(struct player *AttackerPlayer, struct player *AttackedPlayer)
 	}
 	
 }
+int find_players(struct player player[], int i, MapSlot map[], int MapSize)
+{
+	int a = player->mapslot;
+	int b;
+	int x;
+	int y;
+	int decision;
+	
+	for(int j = 1; j < MapSize; j++)
+	{
+	if(a - j < 0)
+	{
+		x = 0;
+	}
+	else
+	{
+		x = a - j;
+	}
+	if(a + j > MapSize)
+	{
+		y = MapSize;
+	}
+	else
+	{
+		y = a + j;
+	}
+	if (map[x].PlayerHere != -1)
+	{
+		b = map[x].PlayerHere;	
+	}
+	if(map[x].PlayerHere != -1)
+	{
+		b = map[y].PlayerHere;
+	}
+	}
+	if(map[x].PlayerHere != -1 && map[y].PlayerHere != -1)
+		{
+		do{
+			
+			printf("Attack player 1 = up, 2 = down: ");
+			scanf("%d", &decision);
+			switch(decision)
+			{
+				case 1:
+				b = map[x].PlayerHere;
+				break;
+				case 2:
+				b = map[y].PlayerHere;
+				break;
+				default:
+				printf("Not a valid option.");
+				
+			}
+		}	while(decision >2 || decision <1);
+		}
+		attack(&player[i], &player[b]);
+}
