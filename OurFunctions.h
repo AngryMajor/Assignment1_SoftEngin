@@ -27,7 +27,7 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize);
 
 void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
 
-void PrintMapSlotType(Map[i]);
+void PrintMapSlotType(MapSlots Map[i]);
 
 MapSlot CreatMapSlot();
 
