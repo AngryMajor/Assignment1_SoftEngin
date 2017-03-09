@@ -6,7 +6,7 @@ int main(void)
 
 	//creat player array
 	int PlayerNum;
-	printf("Please input how many players are playing the game: \n");
+	printf("Please input how many players are playing the game: ");
 	scanf("%d", &PlayerNum);
 	struct player player[PlayerNum];
 
@@ -18,7 +18,7 @@ int main(void)
 
 	//creat map array
 	int MapSize;
-	printf("Please input how many slots are in the map: \n");
+	printf("Please input how many slots are in the map: ");
 	scanf("%d", &MapSize);
 	MapSlot Map[MapSize];
 
@@ -32,18 +32,23 @@ int main(void)
 		PlacePlayer(player, PlayerNum, Map, MapSize);
 	//}//end of place players loop
 
-	for(int i=0;i<MapSize;i++) printf("%s %d\n",PrintMapSlotType(Map[i]),Map[i].PlayerHere);
+	//print map
+	for(int i=0;i<MapSize;i++){
+		PrintMapSlotType(Map[i]);
+		printf("  %d",Map[i].PlayerHere);
+		puts("");
+	}
 
 	int choise;
 	int Failed;
 	for(int i=0;i<PlayerNum;i++){
-		printf("It is Player %d's turn. Would you like to\n1. Move or 2. Attack the closest player\n",i+1);
+		printf("palyer %d's turn, would you like to\n1:Move2:Attack closest player",i+1);
 		scanf("%d",&choise);
 
 		if(choise == 1){
 			int direction;
 				
-				printf("Which direction would you like to move? 0 for down, 1 for up");
+				printf("please input witch direction you would like to move, 0 for down, 1 for up");
 				scanf("%d",&direction);
 				
 				switch(direction){
@@ -55,7 +60,7 @@ int main(void)
 						break;
 					default:
 						Failed = 1;
-						printf("Invalid direction, please try again\n");
+						printf("invalid direction, please try again\n");
 						break;
 				}//end of up down switch
 		}else{
