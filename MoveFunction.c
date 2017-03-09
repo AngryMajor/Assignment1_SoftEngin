@@ -17,14 +17,14 @@ int Move(struct player *Player,int PlayerIndex, MapSlot MapSlots[], int directio
 	}//end of ocupied check
 	
 	
-	ExitSlot(Player, (*Player).mapslot);//change player stats for base
+	ExitSlot(Player, (MapSlots[(*Player).mapslot]).thisSlotType);//change player stats for base
 	
 	//move player in the data
 	(*Player).mapslot += direction;
 	(MapSlots[((*Player).mapslot) - direction]).PlayerHere = -1;
 	(MapSlots[(*Player).mapslot]).PlayerHere = PlayerIndex;
 	
-	EnterSlot(Player, (*Player).mapslot);//change player stats to location modified
+	EnterSlot(Player, (MapSlots[(*Player).mapslot]).thisSlotType);//change player stats to location modified
 	
 	return 0;//move exicuted fine
 	
@@ -62,7 +62,7 @@ void EnterSlot(struct player *Player, int SlotType){
 			break;
 		
 		default:
-			printf("Invalid slotType on enter");
+			printf("Invalid slotType on enter\n");
 	}  //End of switch
 	
 	
