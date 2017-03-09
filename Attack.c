@@ -55,7 +55,7 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 		{
 		do{
 			
-			printf("Attack player 1 = up, 2 = down: ");
+			printf("Which player do you want to attack? 1 = up, 2 = down: ");
 			scanf("%d", &decision);
 			switch(decision)
 			{
@@ -66,7 +66,7 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 				b = map[y].PlayerHere;
 				break;
 				default:
-				printf("Not a valid option.");
+				printf("Not a valid option.\n");
 				
 			}
 		}	while(decision >2 || decision <1);
