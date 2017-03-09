@@ -15,6 +15,7 @@ void attack(struct player *AttackerPlayer, struct player *AttackedPlayer)
 	}
 	
 }
+
 int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 {
 	int a = player->mapslot;
