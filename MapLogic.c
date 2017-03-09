@@ -40,11 +40,11 @@ void PlacePlayer(struct player Players[], int playersSize, struct MapSlot MapArr
 
 
 
-char PrintMapSlotType(MapSlot toPrint){
+void PrintMapSlotType(MapSlot toPrint){
 	
 	char *SlotNames[] = {"Flat Ground","Hill","City"};
 	
-	return SlotNames[toPrint.thisSlotType];
+	printf("%s",SlotNames[toPrint.thisSlotType]);
 	
 }  //End of printmapslot
 
