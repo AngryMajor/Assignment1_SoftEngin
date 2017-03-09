@@ -11,7 +11,7 @@ int Move(struct player *Player,int PlayerIndex, MapSlot MapSlots[], int directio
 	if((MapSlots[((*Player).mapslot)+direction]).PlayerHere != -1){
 		
 		//if location is full
-		printf("That Location is ocupied");
+		printf("That Location is ocupied\n");
 		return 1;//returning 1 says to main that this didnt work
 		
 	}//end of ocupied check
@@ -62,7 +62,7 @@ void EnterSlot(struct player *Player, int SlotType){
 			break;
 		
 		default:
-			printf("invlad slotType on enter");
+			printf("Invalid slotType on enter");
 	}  //End of switch
 	
 	
@@ -92,7 +92,7 @@ void ExitSlot(struct player *Player, int SlotType){
 			break;
 		
 		default:
-			printf("invlad slotType on exit");
+			printf("Invalid slotType on exit\n");
 	}//end of switch
 	
 }//end of exit slot
