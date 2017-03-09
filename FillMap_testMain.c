@@ -23,7 +23,7 @@ void PrintMapSlotChar(MapSlot toPrint){
 	
 	char *SlotNames[] = {"Flat Ground","Hill","City"};
 	
-	printf("%s",SlotNames[toPrint.thisSlotType]);
-	if(toPrint.PlayerHere != -1) printf(   "%d",toPrint.PlayerHere);
+	printf("%s\n",SlotNames[toPrint.thisSlotType]);
+	if(toPrint.PlayerHere != -1) printf(   "%d\n",toPrint.PlayerHere);
 	puts("");
 }  //End of printmapslot
