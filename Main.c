@@ -35,8 +35,8 @@ int main(void)
 
 	int choise;
 	for(int i=0;i<PlayerNum;i++){
-		printf("");
-		scanf("",choise);
+		printf("Do you wish to attack or move? 1 = Move, 2 = Attack");
+		scanf("%d",choise);
 
 		if(choise == 1){
 			//move
