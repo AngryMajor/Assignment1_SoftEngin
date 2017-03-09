@@ -23,6 +23,8 @@ void PlacePlayer(struct player Player[], int playersSize, struct MapSlot MapArra
 
 void PrintPlayer(struct player CurrPlayer);  //Function prototype
 
+int find_players(struct player player[], int i, MapSlot map[], int MapSize);
+
 void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
 
 MapSlot CreatMapSlot();
