@@ -1,11 +1,32 @@
 #include "OurFunctions.h"
 
-void Move(struct player *Player, MapSlot MapSlots[], int enterSlot, int exitSlot){
+/*
+Calls ExitSlot then changes data of were the player and finaly calles enter slot
+needs a player the map array and the directions Left is less, right is more
+returns nothing
+*/
+
+int Move(struct player *Player,int PlayerIndex, MapSlot MapSlots[], int direction){
 	
-	ExitSlot(Player, exitSlot);
+	if((MapSlots[((*Player).mapslot)+direction]).PlayerHere != -1){
+		
+		//if location is full
+		printf("That Location is ocupied");
+		return 1;//returning 1 says to main that this didnt work
+		
+	}//end of ocupied check
 	
 	
-	EnterSlot(Player, enterSlot);
+	ExitSlot(Player, (*Player).mapslot);//change player stats for base
+	
+	//move player in the data
+	(*Player).mapslot += direction;
+	(MapSlots[((*Player).mapslot) - direction]).PlayerHere = -1;
+	(MapSlots[(*Player).mapslot]).PlayerHere = PlayerIndex;
+	
+	EnterSlot(Player, (*Player).mapslot);//change player stats to location modified
+	
+	return 0;//move exicuted fine
 	
 }  //End of move
 
