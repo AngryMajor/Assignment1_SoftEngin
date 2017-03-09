@@ -42,13 +42,13 @@ int main(void)
 	int choise;
 	int Failed;
 	for(int i=0;i<PlayerNum;i++){
-		printf("palyer %d's turn, would you like to\n1:Move2:Attack closest player",i+1);
+		printf("Player %d's turn, would you like to\n1:Move 2:Attack closest player",i+1);
 		scanf("%d",&choise);
 
 		if(choise == 1){
 			int direction;
 				
-				printf("please input witch direction you would like to move, 0 for down, 1 for up");
+				printf("Please input which direction you would like to move, 0 for down, 1 for up");
 				scanf("%d",&direction);
 				
 				switch(direction){
