@@ -32,6 +32,7 @@ int main(void)
 		PlacePlayer(player, PlayerNum, Map, MapSize);
 	//}//end of place players loop
 
+	for(int i=0;i<MapSize;i++) print("%s %d\n",PrintMapSlotType(Map[i]),Map[i].PlayerHere);
 
 	int choise;
 	int Failed;
