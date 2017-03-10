@@ -32,9 +32,7 @@ int main(void)
 
 	//print map
 	for(int i=0;i<MapSize;i++){
-		PrintMapSlotType(Map[i]);
-		printf("  %d",Map[i].PlayerHere);
-		puts("");
+		PrintMapSlotChar(Map[i]);
 	}
 
 	int choise;
