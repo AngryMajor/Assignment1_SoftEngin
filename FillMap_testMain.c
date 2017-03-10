@@ -30,6 +30,6 @@ void PrintMapSlotChar(MapSlot toPrint){
 
 void PrintPlayerStats(struct player Player){
 	
-	printf("type:  %d\nname:  %s\nlife points: %d\nsmartness:  %d\nstrength:  %d\nmagic skills:  %d\nluck:  %d\ndexterity:  %d\n",Player.type, Player.name, Player.life_points, Player.smartness, Player.strength, Player.magic_skills, Player.luck, Player.dexterity);
+	printf("name:  %s\nlife points: %d\nsmartness:  %d\nstrength:  %d\nmagic skills:  %d\nluck:  %d\ndexterity:  %d\n", Player.name, Player.life_points, Player.smartness, Player.strength, Player.magic_skills, Player.luck, Player.dexterity);
 	puts("\n");
 }//end of print player stats
