@@ -30,6 +30,7 @@ void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
 void PrintMapSlotType(MapSlot toPrint);
 
 void PrintMapSlotChar(MapSlot toPrint);
+void PrintPlayerStats(struct player Player);
 
 MapSlot CreatMapSlot();
 
