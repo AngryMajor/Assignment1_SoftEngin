@@ -42,17 +42,7 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 		{
 			y = a + j;
 		}
-		if (map[x].PlayerHere != -1)
-		{
-			b = map[x].PlayerHere;	
-			break;
-		}
-		if(map[x].PlayerHere != -1)
-		{
-			b = map[y].PlayerHere;
-			break;
-		}
-
+		
 		if(map[x].PlayerHere != -1 && map[y].PlayerHere != -1)
 			{
 				do{
@@ -76,6 +66,19 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 				}while(decision >2 || decision <1);
 				break;
 			}
+		
+		else if (map[x].PlayerHere != -1)
+		{
+			b = map[x].PlayerHere;	
+			break;
+		}
+		else if(map[x].PlayerHere != -1)
+		{
+			b = map[y].PlayerHere;
+			break;
+		}
+
+		
 	}
 		attack(&player[i], &player[b]);
 }
