@@ -43,7 +43,7 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 			y = a + j;
 		}
 		
-		if(map[x].PlayerHere != -1 && map[y].PlayerHere != -1)
+		if((map[x].PlayerHere != -1 || map[x].PlayerHere != i )&& (map[y].PlayerHere != -1 || map[y].PlayerHere != i))
 			{
 				do{
 
