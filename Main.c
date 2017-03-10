@@ -49,7 +49,7 @@ int main(void)
 		if(choise == 1){
 			int direction;
 				
-				printf("Please input which direction you would like to move, 0 for down, 1 for up:  ");
+				printf("Please input which direction you would like to move\n 0 for down, 1 for up:  ");
 				scanf("%d",&direction);
 				
 				switch(direction){
