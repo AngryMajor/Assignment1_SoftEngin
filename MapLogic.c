@@ -44,7 +44,7 @@ void PrintMapSlotType(MapSlot toPrint){
 	
 	char *SlotNames[] = {"Flat Ground","Hill","City"};
 	
-	printf("%s\n",SlotNames[toPrint.thisSlotType]);
+	printf("%s",SlotNames[toPrint.thisSlotType]);
 	
 }  //End of printmapslot
 
