@@ -30,7 +30,7 @@ void PlacePlayer(struct player Players[], int playersSize, struct MapSlot MapArr
 				Players[playerNum].mapslot = PlayerPlace;
 				playerNum++;
 			}else{
-				PlayerPlace = ((PlayerPlace+1)%MapSze);}
+				PlayerPlace = ((PlayerPlace+1)%MapSize);}
 		}  //End of while
 		
 		EnterSlot(&Players[playerNum],(MapArray[(Players[playerNum]).mapslot]).thisSlotType);
