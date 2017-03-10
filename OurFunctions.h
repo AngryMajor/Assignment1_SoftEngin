@@ -29,6 +29,8 @@ void attack(struct player *AttackerPlayer, struct player *AttackedPlayer);
 
 void PrintMapSlotType(MapSlot toPrint);
 
+void PrintMapSlotChar(MapSlot toPrint);
+
 MapSlot CreatMapSlot();
 
 #endif
