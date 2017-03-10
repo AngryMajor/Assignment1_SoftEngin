@@ -11,7 +11,7 @@ int Move(struct player *Player,int PlayerIndex, MapSlot MapSlots[], int directio
 	if((MapSlots[((*Player).mapslot)+direction]).PlayerHere != -1){
 		
 		//if location is full
-		printf("That Location is ocupied\n");
+		printf("That Location is ocupied\n\n");
 		return 1;//returning 1 says to main that this didnt work
 		
 	}//end of ocupied check
