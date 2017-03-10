@@ -45,33 +45,36 @@ int find_players(struct player player[], int i, MapSlot map[], int MapSize)
 		if (map[x].PlayerHere != -1)
 		{
 			b = map[x].PlayerHere;	
+			break;
 		}
 		if(map[x].PlayerHere != -1)
 		{
 			b = map[y].PlayerHere;
+			break;
 		}
 
 		if(map[x].PlayerHere != -1 && map[y].PlayerHere != -1)
 			{
-			do{
+				do{
 
-				printf("Which player do you want to attack? 1 = up, 2 = down: ");
-				scanf("%d", &decision);
-				switch(decision)
-				{
-					case 1:
-					b = map[x].PlayerHere;
-					break;
-						
-					case 2:
-					b = map[y].PlayerHere;
-					break;
-						
-					default:
-					printf("Not a valid option.\n");
+					printf("Which player do you want to attack? 1 = up, 2 = down: ");
+					scanf("%d", &decision);
+					switch(decision)
+					{
+						case 1:
+						b = map[x].PlayerHere;
+						break;
 
-				}
-			}while(decision >2 || decision <1);
+						case 2:
+						b = map[y].PlayerHere;
+						break;
+
+						default:
+						printf("Not a valid option.\n");
+
+					}
+				}while(decision >2 || decision <1);
+				break;
 			}
 	}
 		attack(&player[i], &player[b]);
