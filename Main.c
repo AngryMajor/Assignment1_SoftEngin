@@ -30,6 +30,10 @@ int main(void)
 
 	PlacePlayer(player, PlayerNum, Map, MapSize);
 
+	for(int i=0;i<PlayerNum,i++){
+		PrintPlayerStats(player);
+	}
+	
 	//print map
 	for(int i=0;i<MapSize;i++){
 		PrintMapSlotChar(Map[i]);
