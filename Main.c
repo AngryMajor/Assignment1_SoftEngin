@@ -30,8 +30,9 @@ int main(void)
 
 	PlacePlayer(player, PlayerNum, Map, MapSize);
 
-	for(int i=0;i<PlayerNum,i++){
-		PrintPlayerStats(player);
+	//print players
+	for(int i=0;i<PlayerNum;i++){
+		PrintPlayerStats(player[i]);
 	}
 	
 	//print map
