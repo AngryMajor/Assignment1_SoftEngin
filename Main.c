@@ -28,9 +28,7 @@ int main(void)
 		Map[i] = CreatMapSlot();
 	}
 
-	//for(int i=0;i<PlayerNum;i++){
-		PlacePlayer(player, PlayerNum, Map, MapSize);
-	//}//end of place players loop
+	PlacePlayer(player, PlayerNum, Map, MapSize);
 
 	//print map
 	for(int i=0;i<MapSize;i++){
